@@ -31,7 +31,7 @@
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/favicon.png') }}"/>
 </head>
-<body class="{{ endpoint }}_endpoint" >
+<body class="{{ endpoint }}_endpoint" style="background-color: black;">
   <main id="main_{{  self._TemplateReference__context.name|replace("simple/", "")|replace(".html", "") }}" class="{{body_class}}">
     {% if errors %}
         <div class="dialog-error" role="alert">
@@ -63,7 +63,7 @@
     {% block content %}
     {% endblock %}
   </main>
-  <footer>
+  <footer style="background-color: #0b0b0b;">
     <p>
     {{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">searxng</a> - {{ searx_version }} — {{ _('a privacy-respecting, open metasearch engine') }}<br/>
         <a href="{{ searx_git_url }}">{{ _('Source code') }}</a>
